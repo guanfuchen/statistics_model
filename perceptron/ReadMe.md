@@ -18,8 +18,8 @@ $$f(x)=sign(wx+b)$$
 
 主要使用感知机的原始形式进行学习，对于误分类的样本，使用下述公式进行sgd更新。
 
-$$w=w+\eta*y_i*x_i$$
+$$w = w + \eta * y_i * x_i$$
 
-$$b=b+\eta*y_i$$
+$$b = b + \eta * y_i$$
 
 [A Perceptron in just a few Lines of Python Code](https://maviccprp.github.io/a-perceptron-in-just-a-few-lines-of-python-code/)
