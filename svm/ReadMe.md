@@ -29,7 +29,7 @@ $$f(x)=sign(\star{w}x+\star{b})$$
 上图中，A，B，C三个点表示3个实例，均在分离超平面的正类一侧，预测它们的类。点A距离超平面较远，若预测为正类比较正确，而C距离分离超平面较近，若预测为正类就不那么确信，B在A与C之间，预测准确度也在A和C之间。使用样本点距离分离超平面的距离来度量预测准确性，同时预测在分离超平面的位置（上方还是下方）来表示分类的正确性，综上可使用$y(wx+b)$来表示分类的正确性及确信度，也就是函数间隔。
 
 定义（函数间隔）对于给定的训练集$T$和超平面$(w,b)$，定义超平面$(w,b)$关于样本点$(x_i,y_i)$的函数间隔为
-$$\hat{\gamma_i}=y_i(wx_i+b)=$$
+$$\hat{\gamma_i}=y_i(wx_i+b)$$
 定义超平面$(w,b)$关于训练数据集$T$的函数间隔为超平面$(w,b)$关于$T$中所有样本点$(x_i,y_i)$的函数间隔之最小值，即
 $$\hat{\gamma}=\min_{i=1,...,N}{\hat{\gamma_i}}$$
 如果等比例改变$w$和$b$，函数间隔也等比例改变，但是超平面并没有改变，也就是函数间隔无法选择唯一的超平面，这里将分离超平面的法向量$w$增加一个约束，如规范化，$||w||=1$，那么这个确定的间隔被称为几何间隔。
@@ -69,19 +69,24 @@ $$f(x)=sign(\star{w}x+\star{b})$$
 将原始最优化问题，应用拉格朗日对偶性，通过求解对偶问题得到原始问题的最优解，这就是线性可分支持向量机的对偶算法。使用该算法的优点：对偶问题更容易求解，自然引入核函数，可以推广到非线性分类问题。
 **具体的推导过程如下所述**
 - 第一步
+
 $$\min_{w,b} \frac{1}{2}{||w||}^2$$
 $$满足约束 y_i(wx_i+b)-1 \geq 0, i=1,2,...,N$$
 - 第二步
+
 为了使用拉格朗日乘子法，将不等式约束均转换为小于
 $$\min_{w,b} \frac{1}{2}{||w||}^2$$
 $$满足约束 1-y_i(wx_i+b) \leq 0, i=1,2,...,N$$
 - 第三步
+
 引入拉格朗日乘子$\alpha_i \geq 0, i=1,2,...,N$，那么对应的拉格朗日函数为：
 $$L(w,b,\alpha)=\frac{1}{2}{||w||}^2+\sum_{i=1}^{N}{\alpha_i(1-y_i(wx_i+b))}$$
 其中，$\alpha=(\alpha_1,\alpha_2,...,\alpha_N)^T$为拉格朗日乘子向量
 - 第四步
+
 使用拉格朗日对偶性，得到原始问题的对偶问题$\max_{\alpha} \min_{w,b} L(w,b,\alpha)$
 - 第五步
+
 求解$\min_{w,b} L(w,b,\alpha)$，分别对$w$和$b$求偏导数并令其为0，得到：
 $$\nabla_{w}L(w,b,\alpha)=w-\sum_{i=1}^{N}{\alpha_i y_i x_i}=0$$
 $$\nabla_{b}L(w,b,\alpha)=-\sum_{i=1}^{N}{\alpha_i y_i}=0$$
@@ -91,6 +96,7 @@ $$\sum_{i=1}^{N}{\alpha_i y_i}=0$$
 带入拉格朗日函数，得到：
 $$L(w,b,\alpha)=-\frac{1}{2} w^T w+\sum_{i=1}^{N}{\alpha_i}=-\frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}+\sum_{i=1}^{N}{\alpha_i}$$
 - 第六步
+
 求$\min_{w,b} L(w,b,\alpha)$对$\alpha$的极大
 $$\max_{\alpha} -\frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}+\sum_{i=1}^{N}{\alpha_i}$$
 $$满足约束 \sum_{i=1}^{N}{\alpha_i y_i}=0$$
@@ -100,6 +106,7 @@ $$\min_{\alpha} \frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i 
 $$满足约束 \sum_{i=1}^{N}{\alpha_i y_i}=0$$
 $$\alpha_i \geq 0, i=1,2,...,N$$
 - 第七步
+
 求得$\star{\alpha}=(\star{\alpha_1},\star{\alpha_2},...,\star{\alpha_l})^T$是上述最优化解，那么存在下标$j$，使得$\star{\alpha_{j}} > 0$，带入得到$\star{w}$和$\star{b}$
 $$\star{w}=\sum_{i=1}{N}{\star{\alpha_i} y_i x_i}$$
 $$\star{b}=y_j - \sum_{i=1}{N}{\star{\alpha_i} y_i (x_i x_j)}$$
