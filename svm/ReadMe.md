@@ -72,19 +72,23 @@ $$f(x)=sign(\star{w}x+\star{b})$$
 
 $$\min_{w,b} \frac{1}{2}{||w||}^2$$
 $$满足约束 y_i(wx_i+b)-1 \geq 0, i=1,2,...,N$$
+
 - 第二步
 
 为了使用拉格朗日乘子法，将不等式约束均转换为小于
 $$\min_{w,b} \frac{1}{2}{||w||}^2$$
 $$满足约束 1-y_i(wx_i+b) \leq 0, i=1,2,...,N$$
+
 - 第三步
 
 引入拉格朗日乘子$\alpha_i \geq 0, i=1,2,...,N$，那么对应的拉格朗日函数为：
 $$L(w,b,\alpha)=\frac{1}{2}{||w||}^2+\sum_{i=1}^{N}{\alpha_i(1-y_i(wx_i+b))}$$
 其中，$\alpha=(\alpha_1,\alpha_2,...,\alpha_N)^T$为拉格朗日乘子向量
+
 - 第四步
 
 使用拉格朗日对偶性，得到原始问题的对偶问题$\max_{\alpha} \min_{w,b} L(w,b,\alpha)$
+
 - 第五步
 
 求解$\min_{w,b} L(w,b,\alpha)$，分别对$w$和$b$求偏导数并令其为0，得到：
@@ -95,16 +99,18 @@ $$w=\sum_{i=1}^{N}{\alpha_i y_i x_i}$$
 $$\sum_{i=1}^{N}{\alpha_i y_i}=0$$
 带入拉格朗日函数，得到：
 $$L(w,b,\alpha)=-\frac{1}{2} w^T w+\sum_{i=1}^{N}{\alpha_i}=-\frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}+\sum_{i=1}^{N}{\alpha_i}$$
+
 - 第六步
 
 求$\min_{w,b} L(w,b,\alpha)$对$\alpha$的极大
 $$\max_{\alpha} -\frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}+\sum_{i=1}^{N}{\alpha_i}$$
 $$满足约束 \sum_{i=1}^{N}{\alpha_i y_i}=0$$
 $$\alpha_i \geq 0, i=1,2,...,N$$
-转坏为求极小值
+转换为求极小值
 $$\min_{\alpha} \frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}-\sum_{i=1}^{N}{\alpha_i}$$
 $$满足约束 \sum_{i=1}^{N}{\alpha_i y_i}=0$$
 $$\alpha_i \geq 0, i=1,2,...,N$$
+
 - 第七步
 
 求得$\star{\alpha}=(\star{\alpha_1},\star{\alpha_2},...,\star{\alpha_l})^T$是上述最优化解，那么存在下标$j$，使得$\star{\alpha_{j}} > 0$，带入得到$\star{w}$和$\star{b}$
@@ -113,6 +119,18 @@ $$\star{b}=y_j - \sum_{i=1}{N}{\star{\alpha_i} y_i (x_i x_j)}$$
 
 
 ### 线性不可分支持向量机
+对于线性不可分的数据集，不等式约束不再满足，这里通过修改硬间隔最大化，转换为软间隔最大化来实现线性不可分支持向量机的求解。一般情况下，训练数据集不是线性可分的，其中有一些特异点（outiler），将这些特异点除去后，剩下的大部分样本点都是线性可分的。这里引入一个松弛变量$\xi_i \geq 0$，使函数间隔加上松弛变量大于等于1，那么约束条件变为：
+$$y_i(w \cdot x_i + b) \geq 1- \xi_i$$
+那么，对每一个松弛变量$\xi_i$，支付一个代价$\xi_i$，目标函数由原来的$\frac{1}{2}{||w||}^2$变成$\frac{1}{2}{||w||}^2 + C \sum_{i=1}^{N} \xi_i$，其中$C > 0$称为惩罚参数，C值大对误分类的惩罚增大，C值小时对误分类的惩罚减小。那么这个目标函数保证了间隔尽量大，同时误分类个数尽量小，C是调和系数。引入后将线性不可分支持向量机的学习问题转换为如下原始问题：
+$$\min_{w,b} \frac{1}{2}{||w||}^2+C \sum_{i=1}^{N} \xi_i$$
+$$满足约束 1-y_i(wx_i+b) - \xi_i \leq 0, i=1,2,...,N$$
+$$\xi_i \geq 0, i=1,2,...,N$$
+这里可证明$w$是唯一的，但是$b$是存在单不唯一，其解存在于一个区间。
+同样根据拉格朗日乘子法，可将线性不可分支持向量机的原始问题转换为如下对偶问题：
+$$\min_{\alpha} \frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}-\sum_{i=1}^{N}{\alpha_i}$$
+$$满足约束 \sum_{i=1}^{N}{\alpha_i y_i}=0$$
+$$0 \geq \alpha_i \leq C, i=1,2,...,N$$
+![](http://chenguanfuqq.gitee.io/tuquan/img_2018_3/svm_1.png)
 
 ## 非线性支持向量机
 
