@@ -55,10 +55,10 @@ $$满足约束 y_i(wx_i+b)-1 \geq 0, i=1,2,...,N$$
 - 构造并求解约束最优化问题：
 $$\min_{w,b} \frac{1}{2}{||w||}^2$$
 $$满足约束 y_i(wx_i+b)-1 \geq 0, i=1,2,...,N$$
-求得最优解$\star{w}$，$\star(b)$
+求得最优解$w^{*}$，$b^{*}$
 - 由此得到分离超平面和分类决策函数：
-$$\star{w}x+\star{b}=0$$
-$$f(x)=sign(\star{w}x+\star{b})$$
+$$w^{*}x+b^{*}=0$$
+$$f(x)=sign(w^{*}x+b^{*})$$
 
 **最大间隔分离超平面的存在唯一性**，证明略（参考统计学习P101），简述：若训练数据集$T$线性可分，则可将训练数据集中的样本点完全正确分开的最大间隔分离超平面存在且唯一。
 
@@ -94,15 +94,15 @@ $$L(w,b,\alpha)=-\frac{1}{2} w^T w+\sum_{i=1}^{N}{\alpha_i}=-\frac{1}{2} \sum_{i
 求$\min_{w,b} L(w,b,\alpha)$对$\alpha$的极大
 $$\max_{\alpha} -\frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}+\sum_{i=1}^{N}{\alpha_i}$$
 $$满足约束 \sum_{i=1}^{N}{\alpha_i y_i}=0$$
-$$\alpha_i geq 0, i=1,2,...,N$$
+$$\alpha_i \geq 0, i=1,2,...,N$$
 转坏为求极小值
 $$\min_{\alpha} \frac{1}{2} \sum_{i=1}^{N}{\sum_{j=1}^{N}{\alpha_i \alpha_j y_i y_j (x_i x_j)}}-\sum_{i=1}^{N}{\alpha_i}$$
 $$满足约束 \sum_{i=1}^{N}{\alpha_i y_i}=0$$
-$$\alpha_i geq 0, i=1,2,...,N$$
+$$\alpha_i \geq 0, i=1,2,...,N$$
 - 第七步
-求得$\star{\alpha}=(\star{\alpha_1},\star{\alpha_2},...,\star{\alpha_l})^T$是上述最优化解，那么存在下标$j$，使得$\star{\alpha_{j}} > 0$，带入得到$\star{w}$和$\star{b}$
-$$\star{w}=\sum_{i=1}{N}{\star{\alpha_i} y_i x_i}$$
-$$\star{b}=y_j - \sum_{i=1}{N}{\star{\alpha_i} y_i (x_i x_j)}$$
+求得$\alpha^{*}=(\alpha_1^{*},\alpha_2^{*},...,\alpha_N^{*})^T$是上述最优化解，那么存在下标$j$，使得$\alpha_{j}^{*} > 0$，带入得到$w^{*}$和$b^{*}$
+$$w^{*}=\sum_{i=1}{N}{\alpha_i^{*} y_i x_i}$$
+$$b^{*}=y_j - \sum_{i=1}{N}{\alpha_i^{*} y_i (x_i x_j)}$$
 
 
 ### 线性不可分支持向量机
