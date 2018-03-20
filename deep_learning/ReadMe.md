@@ -24,19 +24,26 @@ $$a^l=\sigma(z^l)$$
 $$z^l=w^l a^{l-1} + b^l$$
 $$z_j^l=\sum_{k}{w_{jk}^l a_j^{l-1} + b_j^l}$$
 误差和带权输入的关系
-$$\delta_j^l = \partial{C] / \partial{z_j^l}$$
+$$\delta_j^l = \partial{C} / \partial{z_j^l}$$
 
 通常称$\delta_l$为$l$层的误差向量，BP会提供一种计算每一层$\delta^l$的方法，然后将这些误差和最终的$\partial{C} / \partial{w_jk^l}$或者$\partial{C} / \partial{b_j^l}$联系起来。其中BP算法的四个基本方程就是阐述了这个关系：
 - BP1
+
 **输出层误差的方程**
 $$\delta^L = \nabla_{a}{C} \odot \sigma^{\prime}(z^L)$$
+
 - BP2
+
 **使用下一层的误差表示当前层的误差**
-$$\delta^l = ((w^{l+1}^T \delta^{l+1})) \odot \delta^{\prime}(z^l)$$
+$$\delta^l = ((w^{l+1})^T \delta^{l+1})) \odot \delta^{\prime}(z^l)$$
+
 - BP3
+
 **代价函数关于网络中任意偏置的改变率**
 $$\frac{\partial{C}}{\partial{b_j^l}} = \delta_j^l$$
+
 - BP4
+
 **代价函数关于任何一个权重的改变率**
 $$\frac{\partial{C}}{\partial{w_{jk}}^l} = a_k^{l-1} \delta_j^l$$
 
@@ -45,15 +52,16 @@ BP1和BP2可以计算每一层网络的误差，BP3和BP4通过误差和权重�
 ### BP1推导
 BP1的推导较为简单，给出了求误差的初始值
 $$\delta^L = \nabla_{a}{C} \odot \sigma^{\prime}(z^L)$$
-$$\delta_j^L = \frac{\partial{C}}{\partial{z_j_L}} = \frac{\partial{C}}{\partial{a_j_L}} \frac{\partial{a_j_L}}{\partial{z_j_L}} = \frac{\partial{C}}{\partial{a_j_L}} \sigma^{\prime}(z_j_L)$$
+$$\delta_j^L = \frac{\partial{C}}{\partial{z_j^L}}  = \frac{\partial{C}}{\partial{a_j^L}} \frac{\partial{a_j^L}}{\partial{z_j^L}} = \frac{\partial{C}}{\partial{a_j^L}} \sigma^{\prime}(z_j^L)$$
 
 ### BP2推导
 BP2给出了当前层的误差和上一层误差的关系，再根据最后一层的误差值，可递归获取所有层的误差
-$$\delta^l = ((w^{l+1}^T \delta^{l+1})) \odot \delta^{\prime}(z^l)$$
-$$\delta_j^l = \frac{\partial{C}}{\partial{z_j^l}} = \sum_{k}{\frac{\partial{C}}{\partial{z_k^{l+1}}} \frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}}} = \sum_{k}{\frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}} \delta_k_{l+1}}$$
-对下述式子做微分可得$\frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}$
+$$\delta^l = ((w^{l+1})^T \delta^{l+1})) \odot \delta^{\prime}(z^l)$$
+$$\delta_j^l = \frac{\partial{C}}{\partial{z_j^l}} = \sum_{k}{\frac{\partial{C}}{\partial{z_k^{l+1}}} \frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}}} = \sum_{k}{\frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}} \delta_k^{l+1}}$$
+
+对下述式子做微分可得$\frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}}$
 $$z_k^{l+1} = \sum_{j}{w_{kj}^{l+1} a_j^l + b_k^{l+1}} = \sum_{j}{w_{kj}^{l+1} \sigma(z_j^l) + b_k^{l+1}}$$
-$$\frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}} = w_{kj}^{l+1} \sigma^{\prime}(z_j^l)$$
+$$\frac{\partial{z_k^{l+1}}}{\partial{z_j^{l}}} = w_{kj}^{l+1} \sigma^{\prime}(z_j^l)$$
 带入可得BP2:
 $$\delta_j^l = \sum_{k}{ w_{kj}^{l+1} \sigma^{\prime}(z_j^l) \delta_k^{l+1}}$$
 
