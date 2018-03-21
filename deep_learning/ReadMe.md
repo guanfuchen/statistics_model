@@ -27,24 +27,16 @@ $$z_j^l=\sum_{k}{w_{jk}^l a_j^{l-1} + b_j^l}$$
 $$\delta_j^l = \partial{C} / \partial{z_j^l}$$
 
 通常称$\delta_l$为$l$层的误差向量，BP会提供一种计算每一层$\delta^l$的方法，然后将这些误差和最终的$\partial{C} / \partial{w_jk^l}$或者$\partial{C} / \partial{b_j^l}$联系起来。其中BP算法的四个基本方程就是阐述了这个关系：
-- BP1
-
-**输出层误差的方程**
+- BP1 **输出层误差的方程**
 $$\delta^L = \nabla_{a}{C} \odot \sigma^{\prime}(z^L)$$
 
-- BP2
-
-**使用下一层的误差表示当前层的误差**
+- BP2 **使用下一层的误差表示当前层的误差**
 $$\delta^l = ((w^{l+1})^T \delta^{l+1})) \odot \delta^{\prime}(z^l)$$
 
-- BP3
-
-**代价函数关于网络中任意偏置的改变率**
+- BP3 **代价函数关于网络中任意偏置的改变率**
 $$\frac{\partial{C}}{\partial{b_j^l}} = \delta_j^l$$
 
-- BP4
-
-**代价函数关于任何一个权重的改变率**
+- BP4 X**代价函数关于任何一个权重的改变率**
 $$\frac{\partial{C}}{\partial{w_{jk}}^l} = a_k^{l-1} \delta_j^l$$
 
 BP1和BP2可以计算每一层网络的误差，BP3和BP4通过误差和权重、偏置的关系计算每一个相应的梯度
@@ -88,7 +80,18 @@ Hadamard乘积是向量按照元素乘积，即$(s \odot t)_j = s_j t_j$
 ![](http://chenguanfuqq.gitee.io/tuquan/hadamard.png)
 
 参考《神经网络与深度学习》
+
 [Deep Learning深度学习（二）：反向传播](http://chansh518.github.io/deep%20learning/2016/08/08/Deep-Learning-Notes-Backpropagation.html)
+
+[神经网络入门](http://www.ruanyifeng.com/blog/2017/07/neural-network.html)
+
+[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)
+
+[neural-networks-and-deep-learning](https://github.com/mnielsen/neural-networks-and-deep-learning)
+
+[《解析卷积神经网络—深度学习实践手册》](http://lamda.nju.edu.cn/weixs/book/CNN_book.html) 魏秀参老师对于深度学习实践的总结，非常值得学习
+
+[Must Know Tips/Tricks in Deep Neural Networks (by Xiu-Shen Wei)](http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html)
 
 ## 测试
 
