@@ -26,13 +26,22 @@ $$P(Y=1|x)=\frac{1}{1 + exp(wx)}$$
 代入得到下述式子，表示输出$Y=1$的对数几率是输入$x$的线性函数：
 $$log{\frac{P(Y=1|x)}{1-P(Y=1|x)}=wx}$$
 
+
 ## 参数估计
 
 使用极大似然估计方法来估计逻辑斯蒂回归模型的参数，得到逻辑斯蒂回归模型，设$P(Y=1|x)=\pi(x)$，$P(Y=0|x)=1-\pi(x)$，那么似然函数为$\prod_{i=1}^{N}[\pi(x_i)]^{y_i}[1-\pi(x_i)]^{1-y_i}$，对数似然函数为：
 
 ![](http://chenguanfuqq.gitee.io/tuquan/img_2018_3/logistic_like.png)
 
+[【机器学习算法系列之二】浅析Logistic Regression](https://chenrudan.github.io/blog/2016/01/09/logisticregression.html) 这篇博文总结地较好
 
+[逻辑回归LR推导（sigmoid，损失函数，梯度，参数更新公式）](https://hyzhan.github.io/2017/05/23/2017-05-23-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92LR%E6%8E%A8%E5%AF%BC%EF%BC%88sigmoid%EF%BC%8C%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%EF%BC%8C%E6%A2%AF%E5%BA%A6%EF%BC%8C%E5%8F%82%E6%95%B0%E6%9B%B4%E6%96%B0%E5%85%AC%E5%BC%8F%EF%BC%89/)
+
+[Logistic回归的梯度下降法推导](http://ziyuanjun.github.io/2016/01/21/Logistic%E5%9B%9E%E5%BD%92%E7%9A%84%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E6%8E%A8%E5%AF%BC/)
+
+[LogisticRegression](https://github.com/perborgen/LogisticRegression/blob/master/logistic.py) 代码实现，根据推导公式而来，加深理解
+
+[逻辑回归模型(Logistic Regression, LR)基础](https://www.cnblogs.com/sparkwen/p/3441197.html)
 
 ## 测试
 

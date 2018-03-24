@@ -6,7 +6,7 @@
 
 神经网络使用梯度下降算法来学习权重和偏置，梯度的计算则是使用反向传播算法。反向传播算法的核心是对一个代价函数$C$关于任何权重$w$或者偏置$b$的偏导数$\partial{C} / \partial{w}$或者$\partial{C} / \partial{b}$。
 给出BP的四个基本公式前，首先对用到的符号解释
-- 权重$w_{jk}^{l}$表示从第$(l-1)$层的第k个神经元到第$l$层的第$j$个神经元的链接上的权重。
+- 权重$w_{jk}^{l}$表示从第$(l-1)$层的第$k$个神经元到第$l$层的第$j$个神经元的链接上的权重。
 - 偏置$b_j^l$表示在第$l$层第$j$个神经元的偏置
 - 激活值$a_j^l$表示在第$l$层第$j$个神经元的激活值
 - 带权输入，第$l$层神经网络激活前的值$z^l$，其中$z_j^l$表示第$l$层第$j$个神经元的激活函数的带权输入
@@ -63,9 +63,9 @@ $$\frac{\partial{C}}{\partial{b_j^l}} = \delta_j^l$$
 $$\frac{\partial{C}}{\partial{b_j^l}} = \frac{\partial{C}}{\partial{z_j^l}} \frac{\partial{z_j^l}}{\partial{b_j^l}} = \delta_j^l$$
 
 ### BP4推导
-$$\frac{\partial{C}}{\partial{w_{jk}}^l} = a_k^{l-1} \delta_j^l$$
+$$\frac{\partial{C}}{\partial{w_{jk}^l}} = a_k^{l-1} \delta_j^l$$
 
-$$\frac{\partial{C}}{\partial{w_{jk}}^l} = \frac{\partial{C}}{\partial{z_{j}}^l} \frac{\partial{z_{j}}^l}{\partial{w_{jk}}^l}=a_k^{l-1} \delta_j^l$$
+$$\frac{\partial{C}}{\partial{w_{jk}^l}} = \frac{\partial{C}}{\partial{z_{j}}^l} \frac{\partial{z_{j}}^l}{\partial{w_{jk}^l}}=a_k^{l-1} \delta_j^l$$
 
 
 
@@ -92,6 +92,14 @@ Hadamard乘积是向量按照元素乘积，即$(s \odot t)_j = s_j t_j$
 [《解析卷积神经网络—深度学习实践手册》](http://lamda.nju.edu.cn/weixs/book/CNN_book.html) 魏秀参老师对于深度学习实践的总结，非常值得学习
 
 [Must Know Tips/Tricks in Deep Neural Networks (by Xiu-Shen Wei)](http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html)
+
+[深度学习与神经网络全局概览：核心技术的发展历程](https://www.jiqizhixin.com/articles/2016-08-08-2)
+
+[机器学习公开课笔记(4)：神经网络(Neural Network)——表示](http://www.cnblogs.com/python27/p/MachineLearningWeek04.html)
+
+## CNN反向传播
+
+[卷积神经网络中卷积计算，卷积核的旋转？](https://www.zhihu.com/question/55015134)
 
 ## 测试
 
