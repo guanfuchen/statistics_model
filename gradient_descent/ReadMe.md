@@ -25,6 +25,18 @@ $$v \rightarrow v^{\prime} = v - \eta \nabla C$$
 
 [PyTorch: 梯度下降及反向传播](http://blog.csdn.net/m0_37306360/article/details/79307354)
 
+[梯度下降算法的Python实现](http://yphuang.github.io/blog/2016/03/17/Gradient-Descent-Algorithm-Implementation-in-Python/)
+
+[Gradient Descent and SGD](https://am207.github.io/2017/wiki/gradientdescent.html) 文中给出了三维可视化梯度下降的代码
+
+[梯度下降算法的Python实现](http://yphuang.github.io/blog/2016/03/17/Gradient-Descent-Algorithm-Implementation-in-Python/)
+
+[线性回归与梯度下降法优化与比较](http://www.cnblogs.com/Sinte-Beuve/p/6188145.html)
+
+[牛顿法与拟牛顿法](https://tangxman.github.io/2015/11/19/optimize-newton/)
+
+[Math常见的几种最优化方法](http://www.cnblogs.com/maybe2030/p/4751804.html#_label2)
+
 ## 测试
 
 ## 实现
