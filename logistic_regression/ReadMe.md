@@ -43,11 +43,36 @@ $$log{\frac{P(Y=1|x)}{1-P(Y=1|x)}=wx}$$
 
 [逻辑回归模型(Logistic Regression, LR)基础](https://www.cnblogs.com/sparkwen/p/3441197.html)
 
+
+## 推导
+
+令$h_w(x)=\frac{1}{1+e^{-w^T x}}$，其中$w=(w_0, w_1, \cdots, w_d)^T$，$x=(1, x^1, \cdots, x^d)^T$，$X=(x_1, x_2, \cdots, x_N)$，共有$N$个样本，$d$维特征，$LR$中的$Sigmoid$函数导数$h_w(x)^{\prime}=h_w(x)(1-h_w(x))$。其中代价函数如下所示：
+$J(w)=-\frac{1}{N}\sum_{i=1}^{N}(y_i \log h_w(x_i)+(1-y_i) \log (1-h_w(x_i)))$
+$\frac{\partial{J(w)}}{w_j}=-\frac{1}{N}\sum_{i=1}^{N}(y_i \frac{1}{ h_w(x_i)}-(1-y_i) \frac{1}{(1-h_w(x_i))})\frac{\partial{h_w(x_i)}}{\partial{w_j}}$
+$=-\frac{1}{N}\sum_{i=1}^{N}(y_i \frac{1}{ h_w(x_i)}-(1-y_i) \frac{1}{(1-h_w(x_i))})h_w(x_i)(1-h_w(w_i))\frac{\partial{w^T x}}{\partial{w_j}}$
+$=-\frac{1}{N}\sum_{i=1}^{N}(y_i \frac{1}{ h_w(x_i)}-(1-y_i) \frac{1}{(1-h_w(x_i))})h_w(x_i)(1-h_w(w_i))x_i^j$
+$=-\frac{1}{N}\sum_{i=1}^{N}(y_i (1-h_w(x_i))-(1-y_i) h_w(x_i))x_i^j$
+$=-\frac{1}{N}\sum_{i=1}^{N}(y_i - h_w(x_i))x_i^j$
+$=\frac{1}{N}\sum_{i=1}^{N}(h_w(x_i)-y_i)x_i^j$
+使用梯度下降算法更新：
+$w_j=w_j-\alpha \frac{1}{N}\sum_{i=1}^{N}(h_w(x_i)-y_i)x_i^j$
+矩阵形式为：
+$w=w-\alpha \frac{1}{N}X^T(h_w(X)-y)$
+
+
 ## 测试
 
 [1.1.11. logistic 回归](http://sklearn.apachecn.org/cn/0.19.0/modules/linear_model.html#logistic)
 
 ## 实现
+
+## 参考链接
+
+[逻辑回归（LR）总结复习](http://www.cnblogs.com/arachis/p/LR.html) 推导主要参考这个博客。
+
+[逻辑回归原理小结](https://www.cnblogs.com/pinard/p/6029432.html) 刘建平的博客，依旧是参考的重点。
+
+[LR深入理解](https://blog.csdn.net/richard_more/article/details/52764559###;)
 
 
 
