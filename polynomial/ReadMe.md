@@ -21,6 +21,12 @@ X=\left[
 \right]
 $，那么$f_M(x_i,w)=[X]_i^T\mathbf{w}$，$L(\mathbf{w})=\frac{1}{2}\sum_{i=0}^{n}(\sum_{j=0}^M{w_j x_i^j}-y_i)^2=\frac{1}{2}|X\mathbf{w}-\mathbf{y}|_2^2$，求得$\frac{\partial{L}}{\partial{\mathbf{w}}}=X^T(X\mathbf{w}-\mathbf{y})=0$，得到$\mathbf{w}=(X^T X)^{-1} X^T \mathbf{y}$
 
+---
+## 过拟合和欠拟合
+
+多项式拟合中，过高的项数常常会导致过拟合，过低的项数常常会导致欠拟合，如下图所示。
+
+![](http://chenguanfuqq.gitee.io/tuquan2/img_2018_4/screen_2018-04-10_14.43.52.png)
 
 ---
 ## 参考资料
@@ -28,8 +34,6 @@ $，那么$f_M(x_i,w)=[X]_i^T\mathbf{w}$，$L(\mathbf{w})=\frac{1}{2}\sum_{i=0}^
 [《统计学习方法》中关于求拟合多项式系数的问题？](https://www.zhihu.com/question/23483726)
 
 [机器学习入门之多项式曲线拟合](https://blog.csdn.net/xwl198937/article/details/52210156)
-
-[斯坦福机器学习课程 第三周 (4)正则化：解决过拟合问题](http://studyai.site/2016/09/04/%E6%96%AF%E5%9D%A6%E7%A6%8F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%20%E7%AC%AC%E4%B8%89%E5%91%A8%20(4)%E6%AD%A3%E5%88%99%E5%8C%96%EF%BC%9A%E8%A7%A3%E5%86%B3%E8%BF%87%E6%8B%9F%E5%90%88%E9%97%AE%E9%A2%98/)
 
 [numpy.polyfit](https://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.polyfit.html)
 
