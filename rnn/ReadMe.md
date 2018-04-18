@@ -97,6 +97,8 @@ $$(x_1, x_2) \cdot (y_1, y_2) = (x_1*x_2, y_1*y_2)$$
 
 [LSTM模型与前向反向传播算法](http://www.cnblogs.com/pinard/p/6519110.html) 刘建平系列博客，讲解非常清晰。
 
+[循环神经网络(RNN)模型与前向反向传播算法](http://www.cnblogs.com/pinard/p/6509630.html) 刘建平系列博客。
+
 [Vanilla LSTM with numpy](http://blog.varunajayasiri.com/numpy_lstm.html) 使用numpy实现了LSTM。
 
 [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
@@ -114,4 +116,14 @@ $$(x_1, x_2) \cdot (y_1, y_2) = (x_1*x_2, y_1*y_2)$$
 [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) Andrej Karpathy大神char-rcnn的博客，想象力丰富。[min-char-rnn.py代码](https://gist.github.com/karpathy/d4dee566867f8291f086)
 
 [循环神经网络惊人的有效性（上）](https://zhuanlan.zhihu.com/p/22107715) The Unreasonable Effectiveness of Recurrent Neural Networks中文翻译。
+
+[rnn-from-scratch](https://github.com/pangolulu/rnn-from-scratch) 使用numpy实现rnn。
+
+[翻译WILDML RNN系列教程 第一部分 RNN简介](http://friskit.me/2016/10/09/translation-wildml-recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/) 关于RNN的系列教程，值得参考。[rnn-tutorial-rnnlm实现代码](https://github.com/dennybritz/rnn-tutorial-rnnlm)
+
+[RNN(循环神经网络)推导](http://manutdzou.github.io/2016/07/11/RNN-backpropagation.html)
+
+[CS224d－Day 5: RNN快速入门](http://machinelearninghandbook.com/2018/01/cs224d%EF%BC%8Dday-5-rnn%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/) 简单介绍。
+
+[rnn.py pytorch](https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/rnn.py)
 
