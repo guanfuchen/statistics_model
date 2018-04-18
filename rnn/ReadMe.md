@@ -127,3 +127,4 @@ $$(x_1, x_2) \cdot (y_1, y_2) = (x_1*x_2, y_1*y_2)$$
 
 [rnn.py pytorch](https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/rnn.py)
 
+[循环神经网络RNN 梯度推导(BPTT)](https://ilewseu.github.io/2017/12/30/RNN%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/) 推导过程较为清晰。
