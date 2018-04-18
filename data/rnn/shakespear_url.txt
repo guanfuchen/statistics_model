@@ -1,0 +1,1 @@
+https://cs.stanford.edu/people/karpathy/char-rnn/shakespear.txt
