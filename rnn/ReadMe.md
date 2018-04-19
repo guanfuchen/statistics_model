@@ -95,6 +95,10 @@ $$(x_1, x_2) \cdot (y_1, y_2) = (x_1*x_2, y_1*y_2)$$
 ---
 # 参考资料
 
+[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/2017/index.html) cs231n中RNN这一章节。
+
+[CS224d: Deep Learning for Natural Language Processing](http://cs224d.stanford.edu/index.html) cs224d中RNN这一章节。
+
 [LSTM模型与前向反向传播算法](http://www.cnblogs.com/pinard/p/6519110.html) 刘建平系列博客，讲解非常清晰。
 
 [循环神经网络(RNN)模型与前向反向传播算法](http://www.cnblogs.com/pinard/p/6509630.html) 刘建平系列博客。
@@ -128,3 +132,18 @@ $$(x_1, x_2) \cdot (y_1, y_2) = (x_1*x_2, y_1*y_2)$$
 [rnn.py pytorch](https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/rnn.py)
 
 [循环神经网络RNN 梯度推导(BPTT)](https://ilewseu.github.io/2017/12/30/RNN%E7%AE%80%E5%8D%95%E6%8E%A8%E5%AF%BC/) 推导过程较为清晰。
+
+[第7课 循环神经网络与LSTM（寒）](https://www.youtube.com/watch?v=nLPTyL4aLzM) 七月算法深度学习课程，课程内容基本上是网上博客相关内容，可以作为复习。
+
+[循环神经网络和递归神经网络1](https://www.youtube.com/watch?v=OUU4o6WOai8) 深度学习这本书RNN这一章节的视频总结。
+
+[LSTM: A Search Space Odyssey](https://arxiv.org/pdf/1503.04069.pdf) LSTM各种变体对比。[lstm-odyssey实现代码](https://github.com/fomorians/lstm-odyssey) [An LSTM Odyssey 作者博客](https://medium.com/jim-fleming/implementing-lstm-a-search-space-odyssey-7d50c3bacf93)
+
+[An Empirical Exploration of Recurrent Network Architectures](http://proceedings.mlr.press/v37/jozefowicz15.pdf) 多种RNN和LSTM比较。
+
+[awesome-rnn](https://github.com/kjw0612/awesome-rnn)
+
+Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling 论文[librnn实现代码](https://github.com/jych/librnn)
+
+[循环和递归网络学习笔记](https://zxth93.github.io/2017/09/16/%E5%BE%AA%E7%8E%AF%E5%92%8C%E9%80%92%E5%BD%92%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html) 作者阅读deep learning这本书总结的RNN相关知识。
+
