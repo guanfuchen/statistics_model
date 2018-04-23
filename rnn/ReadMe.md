@@ -38,9 +38,9 @@ $$f_t=\sigma(W_f \cdot z_t+b_f)$$
 - 输入门
 $$i_t=\sigma(W_i \cdot z_t+b_i)$$
 - $\bar{C}$
-$$\bar{C_t}=\tanh(W_C \cdot z_t+b_C)$$
+$$\bar{C}_t=\tanh(W_C \cdot z_t+b_C)$$
 - C
-$$C_t=f_t * C_{t-1}+i_t * \bar{C_t}$$
+$$C_t=f_t * C_{t-1}+i_t * \bar{C}_t$$
 - 输出门
 $$o_t=\sigma(W_o \cdot z_t+b_o)$$
 - h
@@ -50,7 +50,7 @@ $$v_t=W_v \cdot h_t+b_v$$
 - $\bar{y}$
 $$\bar{y_t}=softmax(v)$$
 - Loss
-$$L(y,\bar{y}) = -\sum_{t=1}^{\tau}{\sum_{j}{y_{tj}\log{\bar{y_{tj}}}}}$$
+$$L(y,\bar{y}) = -\sum_{t=1}^{\tau}{\sum_{j}{y_{tj}\log{\bar{y}_{tj}}}}$$
 
 ---
 ## 反向传播
