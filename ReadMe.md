@@ -56,6 +56,14 @@
 ## 多项式拟合
 使用多项式拟合来拟合数据。
 
+## 深度学习框架
+增加深度学习框架使用教程，包括Tensorflow、PyTorch等。
+
+### TensoFlow
+细分深度学习框架TensorFlow使用教程。
+
+### PyTorch
+细分深度学习框架PyTorch使用教程。
 
 
 
