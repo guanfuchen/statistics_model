@@ -15,3 +15,16 @@
 [使用决策树处理iris数据集](http://www.letiantian.me/2015-03-31-decision-tree-iris/)
 
 ## 实现
+
+[西瓜数据集2.0](../data/decision_tree/watermelon_2_0.txt)
+
+```
+编号,色泽,根蒂,敲声,纹理,脐部,触感,好瓜
+1,青绿,蜷缩,浊响,清晰,凹陷,硬滑,是
+```
+
+[machine-learning](https://github.com/tz28/machine-learning) 数据集从这个仓库中收集而来。
+
+[如何实现并应用决策树算法？](http://whatbeg.com/2016/04/23/decisiontree.html) 实现思路主要参考这篇博客。
+
+[决策树的实现](https://www.kancloud.cn/digest/machinglearninginact/102857) 增加参考。

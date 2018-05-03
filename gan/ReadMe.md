@@ -30,3 +30,4 @@
 
 [Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch)](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f) pytorch实现简单的GAN网络。[pytorch-generative-adversarial-networks代码](https://github.com/devnag/pytorch-generative-adversarial-networks)
 
+[really-awesome-gan](https://github.com/nightrome/really-awesome-gan) 收藏了很多的关于GAN网络的论文资料。
