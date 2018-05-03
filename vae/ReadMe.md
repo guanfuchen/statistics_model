@@ -47,3 +47,7 @@ CVAE是增加类别输入的VAE变种，输入为类别可以生成无限多该�
 深度学习中文版第19章（近似推断和变分学习）
 
 [深度神经网络生成模型：从 GAN VAE 到 CVAE-GAN](https://zhuanlan.zhihu.com/p/27966420) 对于VAE和GAN以及它们的结合CVAE-GAN都做了形象的解释。
+
+[VAE(Variational Autoencoder)的原理](http://www.cnblogs.com/huangshiyu13/p/6209016.html) 简述了vae的原理，图示非常形象。[Variational Autoencoders Explained英文原文](http://kvfrans.com/variational-autoencoders-explained/) [variational-autoencoder示例代码](https://github.com/kvfrans/variational-autoencoder)
+
+[vae_tutorial](https://github.com/cdoersch/vae_tutorial) 论文Tutorial on Variational Autoencoders示例caffe代码。
