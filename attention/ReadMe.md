@@ -5,7 +5,8 @@
 ---
 ## 图像标注系统
 
-
+### 数据集
+数据集使用coco，其中提供了python API供使用，[cocoapi](https://github.com/cocodataset/cocoapi/tree/master/PythonAPI)。
 
 ---
 ## 参考资料
