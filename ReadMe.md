@@ -41,6 +41,9 @@
 ### VAE
 variational auto-encoder变分自动编码器。
 
+### Attention
+增加Attention机制。
+
 ## 激活函数
 增加激活函数理解总结部分。
 
