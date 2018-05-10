@@ -20,6 +20,12 @@ k-均值是发现给定数据集的k个簇的算法。簇个数k是用户给定�
 $$SSE=\sum_{i=1}^{k}\sum_{x \in C_i}|x-\mu_i|^2$$
 
 ---
+## 应用场景
+k-means可以应用在无监督学习中，通过聚类学习到特征，具体案例如图像分割，将纹理相同的图像分割为同一类别，如下图所示：
+
+![](http://chenguanfuqq.gitee.io/tuquan2/img_2018_5/screen_2018-05-10_15.38.32.png)
+
+---
 ## 参考资料
 
 《机器学习实战》第10章，利用K-均值聚类算法对未标注数据分组。
@@ -35,3 +41,7 @@ $$SSE=\sum_{i=1}^{k}\sum_{x \in C_i}|x-\mu_i|^2$$
 [MachineLearning](https://github.com/csuldw/MachineLearning/tree/master/Kmeans) 其中包含了较多的机器学习示例。
 
 [机器学习算法-K-means聚类](http://www.csuldw.com/2015/06/03/2015-06-03-ml-algorithm-K-means/) 介绍k-means方法较好。
+
+可参考Clustering Lecture 14中的PPT，David Sontag。
+
+[scipy.cluster.vq.kmeans](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.vq.kmeans.html) scipy中kmeans算法。
