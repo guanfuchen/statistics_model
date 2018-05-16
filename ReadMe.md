@@ -50,6 +50,12 @@ variational auto-encoder变分自动编码器。
 ### Attention
 增加Attention机制。
 
+## PCA
+增加PCA。
+
+## LDA
+增加LDA。
+
 ## 激活函数
 增加激活函数理解总结部分。
 
@@ -76,6 +82,9 @@ variational auto-encoder变分自动编码器。
 
 ### PyTorch
 细分深度学习框架PyTorch使用教程。
+
+## 协方差矩阵
+增加协方差矩阵计算。
 
 
 
