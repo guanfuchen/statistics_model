@@ -86,6 +86,14 @@ variational auto-encoder变分自动编码器。
 ## 协方差矩阵
 增加协方差矩阵计算。
 
+## 线性代数
+
+增加线性代数。
+
+### 迹
+
+参考[PyMathModule](https://github.com/guanfuchen/PyMathModule)仓库中矩阵之迹相关。
+
 
 
 
