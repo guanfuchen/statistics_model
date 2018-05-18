@@ -50,10 +50,12 @@ variational auto-encoder变分自动编码器。
 ### Attention
 增加Attention机制。
 
-## PCA
+## 数据降维
+
+### PCA
 增加PCA。
 
-## LDA
+### LDA
 增加LDA。
 
 ## 激活函数
