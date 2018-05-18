@@ -58,6 +58,27 @@ $$\frac{\partial{L(d)}}{\partial{d}}=2X^T X d -2 \lambda d=0$$
 得到$X^T X d = \lambda d$，那么$d$是$X^T X$最大特征值对应的特征向量。通过归纳法可得$l>1$也是相同的证明做成，矩阵D是由前$l$个最大的特征值对应的特征向量组成。
 
 ---
+## 使用注意
+PCA中如何选取n_components需要注意，如果太小压缩过大，基本丢失了有用的信息。一般做法是取n个特征值，保留特征数k需要满足如下公式：
+
+$$\frac{\sum_{i}^{k}{\lambda_i}}{\sum_{i}^{n}{\lambda_i}} \ge 0.99$$
+
+[主成分分析](http://ufldl.stanford.edu/wiki/index.php/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90)
+
+---
+## 应用场景
+
+### EigenFace
+特征Eigen的名字由来是PCA的主元获取是通过其协方差矩阵（$X^TX$）的特征分解获取的，EigenFace保留了人脸中的主要部分，在人脸识别中应用广泛。实现可参考[pca_eigen_face](./pca_eigen_face.ipynb)，其中对pca中的component（已经解码为原数据大小）即Eigenface进行了可视化。
+
+
+[PCA 10: eigen-faces](https://www.youtube.com/watch?v=_lY74pXWlS8) youtube上关于EigenFace的应用，[Principal Component Analysis 系列播单](https://www.youtube.com/watch?v=IbE0tbjy6JQ&list=PLBv09BD7ez_5_yapAg86Od6JeeypkS4YM)。
+
+[Faces recognition example using eigenfaces and SVMs](http://scikit-learn.org/0.15/auto_examples/applications/face_recognition.html)
+
+[Faces recognition example using eigenfaces and SVMs](http://scikit-learn.org/stable/auto_examples/applications/plot_face_recognition.html)
+
+---
 ## 参考资料
 
 [Machine Learning小结(4)：主成分分析（PCA）](http://blog.kongfy.com/2014/11/machine-learning%E5%B0%8F%E7%BB%934%EF%BC%9A%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%EF%BC%88pca%EF%BC%89/) 作者总结了Ng课程中关于PCA的相关总结。
