@@ -96,7 +96,17 @@ variational auto-encoder变分自动编码器。
 
 参考[PyMathModule](https://github.com/guanfuchen/PyMathModule)仓库中矩阵之迹相关。
 
+### SVD
 
+增加SVD奇异值分解，参考[svd](./svd/ReadMe.md)
+
+
+---
+## 参考资料
+
+[MachineLearning机器学习实战](https://github.com/apachecn/MachineLearning/tree/master/src/py2.x/ML) 机器学习实战包含了书籍和示例代码，其中包括了自我实现的以及sklearn中的常用算法示例，[机器学习实战](http://ml.apachecn.org/mlia/) 网页浏览。
+
+[machine-learning-notes](https://github.com/roboticcam/machine-learning-notes) 徐亦达教授总结的latex书写的机器学习知识。
 
 
 
