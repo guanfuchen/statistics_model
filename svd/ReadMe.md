@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # SVD
 
 奇异值分解（singular value decomposition）是线性代数中一种重要的矩阵分解，在信号处理、统计学等领域中都有重要应用。对称矩阵特征向量分解的基础是谱分析，而奇异值分解则是谱分析理论在任意矩阵上的推广（不限制矩阵的维度）。
@@ -41,3 +42,5 @@ MIT 线性代数 [第30集] 奇异值分解
 [奇异值分解(SVD)原理与在降维中的应用](https://www.cnblogs.com/pinard/p/6251584.html) 刘建平大神SVD讲解。
 
 [谈谈矩阵的 SVD 分解](https://liam0205.me/2017/11/22/SVD-for-Human-Beings/) 非常好的SVD以及其他矩阵知识总结，同时提供了SVD在图像压缩上的应用。
+
+[机器学习中的数学(5)-强大的矩阵奇异值分解(SVD)及其应用](https://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html)
