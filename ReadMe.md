@@ -108,6 +108,8 @@ variational auto-encoder变分自动编码器。
 
 [machine-learning-notes](https://github.com/roboticcam/machine-learning-notes) 徐亦达教授总结的latex书写的机器学习知识。
 
+[Mathematics](https://github.com/Ewenwan/Mathematics) 作者记录的数学知识点仓库，结构思路可以参考，以及对应的[MVision计算机视觉相关](https://github.com/Ewenwan/MVision)。
+
 
 
 
