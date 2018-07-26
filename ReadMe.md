@@ -79,6 +79,9 @@ variational auto-encoder变分自动编码器。
 ## 深度学习框架
 增加深度学习框架使用教程，包括Tensorflow、PyTorch等。
 
+下述是其他深度学习框架：
+- [DeepPy: Deep learning in Python](http://andersbll.github.io/deeppy-website/) 纯用numpy实现的深度学习框架（GPU加速）。
+
 ### TensoFlow
 细分深度学习框架TensorFlow使用教程。
 
