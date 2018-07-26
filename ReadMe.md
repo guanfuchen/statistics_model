@@ -85,6 +85,9 @@ variational auto-encoder变分自动编码器。
 ### PyTorch
 细分深度学习框架PyTorch使用教程。
 
+### MXNet
+细分深度学习框架MXNet使用教程。
+
 ## 协方差矩阵
 增加协方差矩阵计算。
 
