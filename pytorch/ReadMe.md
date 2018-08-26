@@ -47,3 +47,25 @@ Embedding是一个保存了固定字典和大小的简单查找表。这个模�
 [torch.nn英文文档](https://pytorch.org/docs/master/nn.html)
 
 [torch vision](https://github.com/pytorch/vision#models) 其中实现了大量的视觉模型。
+
+
+---
+## 学习率调整
+
+
+### MultiStepLR
+```python
+>>> # Assuming optimizer uses lr = 0.05 for all groups
+>>> # lr = 0.05     if epoch < 30
+>>> # lr = 0.005    if 30 <= epoch < 80
+>>> # lr = 0.0005   if epoch >= 80
+>>> scheduler = MultiStepLR(optimizer, milestones=[30,80], gamma=0.1)
+>>> for epoch in range(100):
+>>>     scheduler.step()
+>>>     train(...)
+>>>     validate(...)
+```
+
+### 参考资料
+
+- [How to adjust Learning Rate](https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate)
