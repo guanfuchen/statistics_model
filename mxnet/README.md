@@ -89,3 +89,6 @@ A2_np = A_nd.asnumpy()
 - [Why MXNet?](https://mxnet.incubator.apache.org/faq/why_mxnet.html) 官方非常好的科普文章。
 - [MXNet - Python API](https://mxnet.incubator.apache.org/api/python/index.html) 其中介绍了MXNet Gluon API和Module API这两种API接口的区别以及相关的Python API。
 - [MXNet Tutorials](https://mxnet.incubator.apache.org/tutorials/index.html) MXNet示例教程。
+- [mxnet和caffe转换器caffe_converter](https://github.com/apache/incubator-mxnet/tree/430ea7bfbbda67d993996d81c7fd44d3a20ef846/tools/caffe_converter)
+- [mxnet rcnn](https://github.com/apache/incubator-mxnet/tree/master/example/rcnn) mxnet官方仓库代码实现了rcnn网络。
+- [mx-rfcn](https://github.com/giorking/mx-rfcn)
